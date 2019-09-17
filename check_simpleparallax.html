@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SimpleParallax</title>
+	<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.1.0/dist/simpleParallax.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<style type="text/css">
+		.ext{
+			width: 40vw;
+	    margin: auto;
+		}
+
+		.simpleParallax{
+			margin-bottom: 25px;
+		}
+
+		.ext-ext{
+			margin-top: 200px;
+			margin-bottom: 200px;
+		}
+
+		.int {
+    /* background: red; */
+	    width: 150px;
+	    margin: auto;
+	    margin-bottom: 25px;
+	    padding: 12px;
+	    border: 1px solid grey;
+	    font-family: sans-serif;
+	    box-shadow: 0px 0px 12px #b2b2b2;
+		}
+
+		header {
+	    background: #f7f7f7;
+	    height: 50px;
+	    line-height: 50px;
+	    box-shadow: 0px 0px 20px 0px #c9c9c9;
+	    z-index: 2;
+	    position: fixed;
+	    width: 100%;
+	    top: 0;
+		}
+
+		.git_contact {
+	    text-align: center;
+	    font-size: 14px;
+	    text-decoration: none !important;
+		}
+
+		.git_contact a {
+    	color: #A8A8A8;
+    	text-decoration: none !important;
+    	transition: 0.15s all;
+    	font-family: sans-serif;
+		}
+
+		.git_contact a:hover {
+    	transition: 0.15s all;
+    	color: #000;
+		}
+
+		body{
+			margin: 0px;
+		}
+
+		h1{
+			margin-top: 180px;
+	    font-family: sans-serif;
+	    font-weight: 400;
+	    text-align: center;
+	    font-size: 65px;
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="git_contact">
+				<a href="https://github.com/MNoventa" target="blank">
+					<span class="fab fa-github"></span>
+					MNoventa
+				</a>
+			</div>
+		</div>
+	</header>
+	<h1>Testing SimpleParallax</h1>
+	<div class="ext-ext">
+		<div class="ext">
+				<div class="int">
+					delay: 0,<br>
+			    orientation: 'down',<br>
+			    scale: 1.5,<br>
+			    overfow: true<br>
+			  </div>
+			<img class="thumbnail" src="img/image.jpg" alt="image">
+				<div class="int">
+					delay: .9,<br>
+			    orientation: 'up',<br>
+			    scale: 1.5,<br>
+			    overfow: true<br>
+			  </div>
+			<img class="thumbnail1" src="img/image2.jpg" alt="image">
+				<div class="int">
+					delay: .9,<br>
+			    orientation: 'right',<br>
+			    scale: 1.2,<br>
+			    overfow: false<br>
+			  </div>
+			<img class="thumbnail2" src="img/image3.jpg" alt="image">
+				<div class="int">
+					delay: .9,<br>
+			    orientation: 'left',<br>
+			    scale: 1.2,<br>
+			    overfow: false<br>
+			  </div>
+			<img class="thumbnail3" src="img/image4.jpg" alt="image">
+
+		</div>
+	<div class="ext">
+
+	<script>
+		var image1 = document.getElementsByClassName('thumbnail');
+		var image2 = document.getElementsByClassName('thumbnail1');
+		var image3 = document.getElementsByClassName('thumbnail2');
+		var image4 = document.getElementsByClassName('thumbnail3');
+
+		new simpleParallax(image1, {
+		    delay: 0,
+		    orientation: 'down',
+		    scale: 1.5,
+		    overfow: true
+		});
+
+		new simpleParallax(image2, {
+		    delay: .9,
+		    orientation: 'up',
+		    scale: 1.5,
+		    overfow: true
+		});
+
+		new simpleParallax(image3, {
+		    delay: .9,
+		    orientation: 'right',
+		    scale: 1.2,
+		    overfow: false
+		});
+
+		new simpleParallax(image4, {
+		    delay: .9,
+		    orientation: 'left',
+		    scale: 1.2,
+		    overfow: false
+		});
+	</script>
+
+	
+</body>
+</html>
